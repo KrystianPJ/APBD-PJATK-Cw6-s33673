@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" itemscope="itemscope" itemtype="https://schema.org/WebApplication" prefix="og: https://ogp.me/ns">
+<head>
+    <title>gitignore.io - Create Useful .gitignore Files For Your Project</title>
+
+    <base href="/developers/gitignore/">
+    <script>
+      window.BASE_PREFIX = "/developers/gitignore/".replace(/\/+$/, '');
+      window.GOOGLE_ANALYTICS_UID = "UA-21104039-1";
+    </script>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K4WD79L');</script>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Create useful .gitignore files for your project by selecting from 571 Operating System, IDE, and Programming Language .gitignore templates">
+    <meta name="keywords" content="gitignore,.gitignore,git,ignore,file,create,make,generate,build,automatic,programmatic,command line,cli">
+
+    <link rel="preload" as="image"
+      href="img/gitignore-logo-horizontal@2x.png"
+      imagesrcset="img/gitignore-logo-horizontal.png 370w, img/gitignore-logo-horizontal@2x.png 740w"
+      imagesizes="(min-width: 960px) 740px, 100vw"
+    >
+    <link rel="preload" as="image" href="img/lightning.svg">
+
+    <link rel="preload" as="font" type="font/woff"  crossorigin="anonymous" href="fonts/ProximaNova-Regular.woff">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="fonts/ProximaNova-Regular.woff2">
+    <link rel="preload" as="font" type="font/otf"   crossorigin="anonymous" href="fonts/ProximaNova-Regular.otf">
+
+    <link rel="preload" as="font" type="font/woff"  crossorigin="anonymous" href="fonts/ProximaNova-Semibold.woff">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="fonts/ProximaNova-Semibold.woff2">
+    <link rel="preload" as="font" type="font/otf"   crossorigin="anonymous" href="fonts/ProximaNova-Semibold.otf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="gitignore.io">
+    <meta property="og:description" content="Create useful .gitignore files for your project">
+    <meta property="og:image" content="https://www.toptal.com/developers/gitignore/img/preview@2x.png">
+    <meta property="og:url" content="https://www.toptal.com/developers/gitignore">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@toptal">
+
+    <link rel="canonical" href="https://www.toptal.com/developers/gitignore" />
+
+    <link rel="stylesheet" type="text/css" href="assets/main.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-21104039-1"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4WD79L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="internal-linking">
+  <div class="internal-linking__container">
+    <div class="internal-linking__title">
+      <a href="https://www.toptal.com/developers">
+        <img width="12" height="16" src="img/lightning.svg" alt="" />
+        <span>
+          Hire The World’s
+          <br />
+          Top Talent On Demand
+        </span>
+      </a>
+    </div>
+    <div class="internal-linking__ticker-list">
+      
+        <a
+          href="https://www.toptal.com/artificial-intelligence"
+          data-ga-category="inbound-link"
+          data-ga-event="AI Engineers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          AI Engineers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/angular-js"
+          data-ga-category="inbound-link"
+          data-ga-event="AngularJS Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          AngularJS Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/big-commerce"
+          data-ga-category="inbound-link"
+          data-ga-event="BigCommerce Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          BigCommerce Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/front-end"
+          data-ga-category="inbound-link"
+          data-ga-event="Front-end Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Front-end Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/html5"
+          data-ga-category="inbound-link"
+          data-ga-event="HTML5 Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          HTML5 Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/internet-of-things"
+          data-ga-category="inbound-link"
+          data-ga-event="IoT Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          IoT Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/ios"
+          data-ga-category="inbound-link"
+          data-ga-event="iOS Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          iOS Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/java"
+          data-ga-category="inbound-link"
+          data-ga-event="Java Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Java Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/kubernetes"
+          data-ga-category="inbound-link"
+          data-ga-event="Kubernetes Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Kubernetes Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/magento"
+          data-ga-category="inbound-link"
+          data-ga-event="Magento Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Magento Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/app"
+          data-ga-category="inbound-link"
+          data-ga-event="Mobile App Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Mobile App Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/nodejs"
+          data-ga-category="inbound-link"
+          data-ga-event="Node.js Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Node.js Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/odoo"
+          data-ga-category="inbound-link"
+          data-ga-event="Odoo Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Odoo Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/php"
+          data-ga-category="inbound-link"
+          data-ga-event="PHP Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          PHP Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/powerapps"
+          data-ga-category="inbound-link"
+          data-ga-event="PowerApps Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          PowerApps Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/python"
+          data-ga-category="inbound-link"
+          data-ga-event="Python Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Python Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/qa"
+          data-ga-category="inbound-link"
+          data-ga-event="QA Engineers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          QA Engineers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/react"
+          data-ga-category="inbound-link"
+          data-ga-event="React.js Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          React.js Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/remote"
+          data-ga-category="inbound-link"
+          data-ga-event="Remote Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Remote Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/ruby-on-rails"
+          data-ga-category="inbound-link"
+          data-ga-event="Ruby on Rails Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Ruby on Rails Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/salesforce"
+          data-ga-category="inbound-link"
+          data-ga-event="Salesforce Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Salesforce Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/salesforce-consultants"
+          data-ga-category="inbound-link"
+          data-ga-event="Salesforce Consultants"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Salesforce Consultants
+        </a>
+      
+        <a
+          href="https://www.toptal.com/shopify"
+          data-ga-category="inbound-link"
+          data-ga-event="Shopify Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Shopify Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/software"
+          data-ga-category="inbound-link"
+          data-ga-event="Software Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Software Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/squarespace"
+          data-ga-category="inbound-link"
+          data-ga-event="Squarespace Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Squarespace Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/svelte"
+          data-ga-category="inbound-link"
+          data-ga-event="Svelte Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Svelte Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/technical-writers"
+          data-ga-category="inbound-link"
+          data-ga-event="Technical Writers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          Technical Writers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/webrtc"
+          data-ga-category="inbound-link"
+          data-ga-event="WebRTC Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          WebRTC Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/woocommerce"
+          data-ga-category="inbound-link"
+          data-ga-event="WooCommerce Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          WooCommerce Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/wordpress"
+          data-ga-category="inbound-link"
+          data-ga-event="WordPress Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          WordPress Developers
+        </a>
+      
+        <a
+          href="https://www.toptal.com/wpf"
+          data-ga-category="inbound-link"
+          data-ga-event="WPF Developers"
+          data-ga-label="GitIgnore"
+          target="_blank"
+          rel="noopener"
+          class="internal-linking__link"
+        >
+          WPF Developers
+        </a>
+      
+    </div>
+  </div>
+</div>
+<script>
+
+var handleOnClick = function handleOnClick(e) {
+  if (!('gtag' in window)) return;
+  window.gtag('event', e.target.dataset.gaEvent, {
+    event_category: e.target.dataset.gaCategory,
+    event_label: e.target.dataset.gaLabel,
+    non_interaction: true
+  });
+};
+
+document.querySelectorAll('.internal-linking__link').forEach(function (item) {
+  item.addEventListener('click', handleOnClick);
+  item.addEventListener('auxclick', handleOnClick);
+});
+
+</script>
+
+    <header>
+        <div class="container">
+            <div class="header-left-column">
+                <a href="https://www.toptal.com/developers" aria-label="Toptal" title="Toptal">
+                    <img src="img/toptal-logo-wordmark.svg" height="30" width="100" alt="Toptal" />
+                </a>
+                <h1>gitignore.io</h1>
+            </div>
+            <div class="header-right-column">
+                <a href="https://github.com/toptal/gitignore.io" aria-label="GitHub hosted source code for .gitignore.io" title="GitHub hosted source code for .gitignore.io">
+                    <img src="img/github-logo.svg" alt="GitHub" width="24" height="24" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <main>
+            <div class="container">
+                <div class="masthead">
+                    <div class="masthead-top">
+                        <img srcset="img/gitignore-logo-horizontal.png 370w,
+                                     img/gitignore-logo-horizontal@2x.png 740w"
+                                width="370"
+                                height="50"
+                                sizes="(min-width: 960px) 740px, 100vw"
+                                src="img/gitignore-logo-horizontal.png"
+                                alt="gitignore.io" />
+                        <h2>Create useful .gitignore files for your project</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <p style="display:none" id="input-gitignore-placeholder">Search Operating Systems, IDEs, or Programming Languages</p>
+                        <select id="input-gitignore" class="form-control input"></select>
+                        <div class="input-group-append">
+                            <button type="button" id="btn-gitignore" class="btn btn-gitignore">Create</button>
+                        </div>
+                    </div>
+
+                    <div class="masthead-bottom">
+                        <ul class="masthead-nav">
+                            <li><a href="https://github.com/toptal/gitignore.io" aria-label="GitHub hosted source code for .gitignore.io" title="GitHub hosted source code for .gitignore.io">Source Code</a></li>
+                            <li><a href="https://docs.gitignore.io/install/command-line" aria-label="Learn how to run .gitignore.io from the command line" title="Learn how to run .gitignore.io from the command line">Command Line Docs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer Scripts -->
+    <script async src="assets/main.js"></script>
+    <script async>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+
+        gtag('config', "UA-21104039-1", {
+            'content_group1': 'Git Ignore',
+            'custom_map': { 'dimension10': 'client_id' }
+        });
+
+        setTimeout(function() {
+            gtag('event', 'read', { 'event_category': '15_seconds' });
+        }, 15000);
+    </script>
+</body>
+</html>
