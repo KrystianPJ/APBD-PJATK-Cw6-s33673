@@ -15,7 +15,7 @@ public class AppointmentsController : ControllerBase
     public AppointmentsController(IConfiguration configuration)
     {
         _connectionString = configuration.GetConnectionString("DefaultConnection") 
-            ?? throw new InvalidOperationException("Brak Connection String w konfiguracji.");
+            ?? throw new InvalidOperationException("Brak Connection String w konfiguracji");
     }
 
     [HttpGet]
@@ -75,7 +75,7 @@ public class AppointmentsController : ControllerBase
 
         await using var reader = await command.ExecuteReaderAsync();
         if (!await reader.ReadAsync()) 
-            return NotFound(new ErrorResponseDto { Message = "Nie znaleziono wizyty." });
+            return NotFound(new ErrorResponseDto { Message = "Nie znaleziono wizyty" });
 
         return Ok(new AppointmentDetailsDto
         {
@@ -118,9 +118,9 @@ public class AppointmentsController : ControllerBase
         await actorsReader.CloseAsync();
 
         if (patientActive == null || patientActive == false) 
-            return BadRequest(new ErrorResponseDto { Message = "Pacjent nie istnieje lub jest nieaktywny." });
+            return BadRequest(new ErrorResponseDto { Message = "Pacjent nie istnieje lub jest nieaktywny" });
         if (doctorActive == null || doctorActive == false) 
-            return BadRequest(new ErrorResponseDto { Message = "Lekarz nie istnieje lub jest nieaktywny." });
+            return BadRequest(new ErrorResponseDto { Message = "Lekarz nie istnieje lub jest nieaktywny" });
 
         
         var conflictQuery = "SELECT 1 FROM dbo.Appointments WHERE IdDoctor = @IdDoctor AND AppointmentDate = @AppointmentDate AND Status != 'Cancelled'";
@@ -129,7 +129,7 @@ public class AppointmentsController : ControllerBase
         conflictCmd.Parameters.Add("@AppointmentDate", SqlDbType.DateTime2).Value = request.AppointmentDate;
         
         if (await conflictCmd.ExecuteScalarAsync() != null) 
-            return Conflict(new ErrorResponseDto { Message = "Lekarz ma już zaplanowaną wizytę w tym terminie." });
+            return Conflict(new ErrorResponseDto { Message = "Lekarz ma już zaplanowaną wizytę w tym terminie" });
 
        
         var insertQuery = """
@@ -153,7 +153,7 @@ public class AppointmentsController : ControllerBase
     {
         var allowedStatuses = new[] { "Scheduled", "Completed", "Cancelled" };
         if (!allowedStatuses.Contains(request.Status)) 
-            return BadRequest(new ErrorResponseDto { Message = "Nieprawidłowy status wizyty." });
+            return BadRequest(new ErrorResponseDto { Message = "Nieprawidłowy status wizyty" });
 
         await using var connection = new SqlConnection(_connectionString);
         await connection.OpenAsync();
@@ -163,14 +163,14 @@ public class AppointmentsController : ControllerBase
         checkCmd.Parameters.Add("@Id", SqlDbType.Int).Value = idAppointment;
         await using var reader = await checkCmd.ExecuteReaderAsync();
         if (!await reader.ReadAsync()) 
-            return NotFound(new ErrorResponseDto { Message = "Wizyta nie istnieje." });
+            return NotFound(new ErrorResponseDto { Message = "Wizyta nie istnieje" });
         
         var currentStatus = reader.GetString(0);
         var currentDate = reader.GetDateTime(1);
         await reader.CloseAsync();
 
         if (currentStatus == "Completed" && currentDate != request.AppointmentDate)
-            return Conflict(new ErrorResponseDto { Message = "Nie można zmienić terminu wizyty o statusie Completed." });
+            return Conflict(new ErrorResponseDto { Message = "Nie można zmienić terminu wizyty o statusie Completed" });
 
         
         var checkActorsQuery = """
@@ -189,9 +189,9 @@ public class AppointmentsController : ControllerBase
         await actorsReader.CloseAsync();
 
         if (patientActive == null || patientActive == false) 
-            return BadRequest(new ErrorResponseDto { Message = "Pacjent nie istnieje lub jest nieaktywny." });
+            return BadRequest(new ErrorResponseDto { Message = "Pacjent nie istnieje lub jest nieaktywny" });
         if (doctorActive == null || doctorActive == false) 
-            return BadRequest(new ErrorResponseDto { Message = "Lekarz nie istnieje lub jest nieaktywny." });
+            return BadRequest(new ErrorResponseDto { Message = "Lekarz nie istnieje lub jest nieaktywny" });
 
        
         if (currentDate != request.AppointmentDate)
@@ -202,7 +202,7 @@ public class AppointmentsController : ControllerBase
             conflictCmd.Parameters.Add("@AppointmentDate", SqlDbType.DateTime2).Value = request.AppointmentDate;
             conflictCmd.Parameters.Add("@IdAppointment", SqlDbType.Int).Value = idAppointment;
             if (await conflictCmd.ExecuteScalarAsync() != null) 
-                return Conflict(new ErrorResponseDto { Message = "Lekarz ma już zaplanowaną inną wizytę w tym terminie." });
+                return Conflict(new ErrorResponseDto { Message = "Lekarz ma już zaplanowaną inną wizytę w tym terminie" });
         }
 
         
@@ -237,10 +237,10 @@ public class AppointmentsController : ControllerBase
         var statusObj = await statusCmd.ExecuteScalarAsync();
 
         if (statusObj == null) 
-            return NotFound(new ErrorResponseDto { Message = "Wizyta nie istnieje." });
+            return NotFound(new ErrorResponseDto { Message = "Wizyta nie istnieje" });
             
         if (statusObj.ToString() == "Completed") 
-            return Conflict(new ErrorResponseDto { Message = "Nie można usunąć wizyty o statusie Completed." });
+            return Conflict(new ErrorResponseDto { Message = "Nie można usunąć wizyty o statusie Completed" });
 
         var deleteCmd = new SqlCommand("DELETE FROM dbo.Appointments WHERE IdAppointment = @Id", connection);
         deleteCmd.Parameters.Add("@Id", SqlDbType.Int).Value = idAppointment;
